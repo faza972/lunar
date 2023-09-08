@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".constraintActivity">
+    
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home Pemesanan Makanan"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/binarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hai Binarian,"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tanya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mau Makan Apa Hari Ini"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/binarian"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_akun"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:src="@drawable/account_circle"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_keranjang"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:src="@drawable/keranjang"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toStartOf="@id/image_akun"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tanya"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iklan"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            tools:src="@drawable/fruit_salad__1_"
+            app:layout_constraintTop_toBottomOf="@id/tanya"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:alpha="0.5"
+            android:background="@color/black"
+            tools:ignore="MissingConstraints" /> />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/diskon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="10dp"
+            tools:src="@drawable/diskon"
+            app:layout_constraintBottom_toBottomOf="@id/iklan"
+            app:layout_constraintTop_toTopOf="@+id/iklan"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/diskont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diskon 30%"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/iklan"
+            app:layout_constraintBottom_toTopOf="@id/teks_diskon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/diskon"/>
+        <TextView
+            android:id="@+id/teks_diskon"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Pesan Makanan Lewat Aplikasi dan Dapatkan Diskonmu"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/diskont"
+            app:layout_constraintBottom_toBottomOf="@id/iklan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/diskon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pilih_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:ignore="ExtraText,NotSibling"
+        app:layout_constraintTop_toBottomOf="@id/promo"
+        app:layout_constraintStart_toStartOf="parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/jenis_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                tools:src="@drawable/nasi"
+                app:layout_constraintTop_toTopOf="@id/pilih_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/jenis_2"/>
+            <TextView
+                android:id="@+id/rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nasi"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/jenis_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/noodle"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/jenis_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                tools:src="@drawable/mie"
+                app:layout_constraintTop_toStartOf="@id/pilih_1"
+                app:layout_constraintStart_toEndOf="@id/jenis_1"
+                app:layout_constraintEnd_toStartOf="@id/jenis_3"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/noodle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mie"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/jenis_2"
+                app:layout_constraintStart_toEndOf="@id/rice"
+                app:layout_constraintEnd_toStartOf="@id/Snek"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/jenis_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                tools:src="@drawable/snack"
+                app:layout_constraintTop_toStartOf="@id/pilih_1"
+                app:layout_constraintStart_toEndOf="@id/jenis_2"
+                app:layout_constraintEnd_toStartOf="@id/jenis_4"
+                tools:ignore="MissingConstraints,NotSibling" />
+            <TextView
+                android:id="@+id/Snek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snack"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/jenis_3"
+                app:layout_constraintStart_toEndOf="@id/noodle"
+                app:layout_constraintEnd_toStartOf="@id/drink"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/jenis_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                tools:src="@drawable/minum"
+                app:layout_constraintTop_toStartOf="@id/pilih_1"
+                app:layout_constraintStart_toEndOf="@id/jenis_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,NotSibling" />
+            <TextView
+                android:id="@+id/drink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minum"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/Snek"
+                app:layout_constraintTop_toBottomOf="@id/jenis_4"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/ListMakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List Menu Makanan"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/pilih_1"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list"
+        app:layout_constraintTop_toBottomOf="@id/pilih_1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pilih_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ListMakanan"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NotSibling,UnknownId">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ayam_bakar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp"
+            tools:src="@drawable/ayam_bakar"
+            app:layout_constraintTop_toTopOf="@id/pilih_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/chicken_1"
+            tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/chicken_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayam Bakar"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ayam_bakar"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/harga_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 50.000"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/chicken_1"
+            app:layout_constraintBottom_toTopOf="@id/ayam_geprek"
+            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ayam_goreng"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp"
+            tools:src="@drawable/ayam_goreng"
+            app:layout_constraintTop_toTopOf="@id/pilih_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ayam_bakar"
+            tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/chicken_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayam Goreng"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ayam_goreng"
+            app:layout_constraintStart_toEndOf="@id/ayam_bakar"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/harga_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 40.000"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/chicken_2"
+            app:layout_constraintStart_toEndOf="@id/ayam_bakar"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ayam_geprek"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp"
+            tools:src="@drawable/ayam_geprek"
+            app:layout_constraintTop_toBottomOf="@id/harga_1"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/chicken_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayam Geprek"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/harga_3"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/harga_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 40.000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sate_usus"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp"
+            tools:src="@drawable/sate_usus_ayam"
+            app:layout_constraintStart_toEndOf="@id/ayam_geprek"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/chicken_4"
+            app:layout_constraintTop_toBottomOf="@id/harga_2"
+            tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/chicken_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sate Usus Ayam"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/harga_4"
+            app:layout_constraintStart_toEndOf="@id/ayam_geprek"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/harga_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 5.000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ayam_geprek"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
